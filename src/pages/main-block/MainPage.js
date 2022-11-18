@@ -4,8 +4,7 @@ import {
 	PhoneOutlined, FormOutlined, PieChartOutlined,
 	CarOutlined, ToolOutlined, SettingOutlined, InfoCircleOutlined
 } from '@ant-design/icons'
-import DrawerWindow from '../components/drawer/DrawerWindow'
-import fon from '../images/background3.webp'
+import DrawerWindow from '../../components/drawer/DrawerWindow'
 
 function MainPage() {
 	const [active, setActive] = useState(1)
@@ -35,9 +34,14 @@ function MainPage() {
 
 
 	const toggleBtn = (num) => setActive(num)
-
+	// bg-[#363636]
 	return (
-		<section className='bg-[#363636] pt-24 pb-10'>
+		<section className='
+	
+		 pt-24
+		  pb-10
+		  '>
+			<div className=' main-block'></div>
 			<div className='container'>
 				<Row gutter={[10, 10]} className=''>
 					<Col lg={10}
@@ -135,9 +139,6 @@ function MainPage() {
 									<p className='text-white'>Опыт работы 10+ лет</p>
 									<p className='text-white'>Дружелюбный персонал</p>
 									<p className='text-white'>Акции и скидки</p>
-								</div>
-								<div className='bg-[#343434] absolute bottom-[-7%] left-[10%] right-0 rounded-xl w-4/5 text-center' >
-									<p className='text-[#959595] text-sm pt-3'>Попробуйте наш сервис и Вы вернётесь снова</p>
 								</div>
 							</div>
 						</div>

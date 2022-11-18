@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Footer from './components/footer/Footer'
-import MainPage from './pages/MainPage'
+import MainPage from './pages/main-block/MainPage'
 import Header from './components/header/Header'
 import { ConfigProvider } from 'antd'
 import 'antd/dist/antd.variable.min.css'
