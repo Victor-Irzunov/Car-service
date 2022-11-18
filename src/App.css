@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+@import '~antd/dist/antd.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+ }
+
+
+ svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block !important;
+  /* vertical-align: middle !important; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+	display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hover-icon{
+	color:#959595 !important;
+}
+.hover-icon:hover{
+	color: #f03226 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bg-gray-gradient {
+	background: linear-gradient(
+		125.17deg, #272727 0%, #11101d 100%
+	);
 }
 
-.App-link {
-  color: #61dafb;
+.ant-table-tbody {
+	background-color: #343434;
+	color: #fff;
+ }
+ .ant-table-thead .ant-table-cell{
+	background-color: #343434;
+	color: #fff;
+ }
+ .ant-table-row-expand-icon{
+	background: #343434 !important;
+ }
+
+ .ant-table-expanded-row .ant-table-cell{
+	background-color: #777575;
+ }
+
+ 
+ .ant-table-tbody>tr.ant-table-row:hover>td, .ant-table-tbody>tr>td.ant-table-cell-row-hover{
+	background: #f03226 !important;
+ }
+ tr.ant-table-expanded-row:hover>td {
+	background: #f03226 !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer{
+	position: relative;
+}
+.footer__line {
+	height: 48px;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: -48px;
+	width: 100%;
+}
+.footer__line .inner {
+	background: radial-gradient(ellipse at center,rgba(0,0,0,.2) 0,transparent 70%);
+	border-radius: 50%;
+	height: 192px;
+	width: 100%;
 }
