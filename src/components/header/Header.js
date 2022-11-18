@@ -26,7 +26,7 @@ function Header() {
 			className="fixed top-0
 			left-0 right-0
 			z-50 pt-2 pb-2
-			bg-[#222]
+			bg-[#363636]
 			"
 			style={{ boxShadow: '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0)' }}
 		>

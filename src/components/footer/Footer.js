@@ -9,7 +9,7 @@ function Footer() {
     <footer
       className='mt-auto'
       style={{
-        background: '#222',
+        background: '#363636',
       }}
     >
       <Divider />

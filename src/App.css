@@ -42,15 +42,15 @@ img{
 }
 
 .ant-table-tbody {
-	background-color: #343434;
+	background-color: #302f2f;
 	color: #fff;
  }
  .ant-table-thead .ant-table-cell{
-	background-color: #343434;
+	background-color: #302f2f;
 	color: #fff;
  }
  .ant-table-row-expand-icon{
-	background: #343434 !important;
+	background: #302f2f !important;
  }
 
  .ant-table-expanded-row .ant-table-cell{

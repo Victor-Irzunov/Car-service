@@ -7,7 +7,7 @@ import foto4 from '../images/foto-service/service-4.webp'
 
 function FotoCarService() {
 	return (
-		<section className='bg-[#222] pt-24 pb-32'>
+		<section className='bg-[#363636] pt-24 pb-32'>
 			<div className='container'>
 				<h2 className='text-white text-3xl text-center'>
 					Фото нашего автосервиса

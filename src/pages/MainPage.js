@@ -37,13 +37,13 @@ function MainPage() {
 	const toggleBtn = (num) => setActive(num)
 
 	return (
-		<section className='bg-[#222] pt-24 pb-10'>
+		<section className='bg-[#363636] pt-24 pb-10'>
 			<div className='container'>
 				<Row gutter={[10, 10]} className=''>
 					<Col lg={10}
 						className='mt-16'
 					>
-						<h1 className='text-white text-[5em]'>
+						<h1 className='text-[#fff] text-[5em]'>
 							СТО в Минске
 						</h1>
 
