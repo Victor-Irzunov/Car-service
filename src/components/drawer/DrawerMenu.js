@@ -31,7 +31,7 @@ const DrawerMenu = ({ open, setOpen }) => {
 				title="Меню" placement="right"
 				onClose={onClose} open={open}
 				className='relative'
-				drawerStyle={{ background: '#f03226' }}
+				drawerStyle={{ background: '#038fd4' }}
 			>
 				<ListMenu />
 

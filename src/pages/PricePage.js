@@ -4,7 +4,7 @@ import { LineOutlined } from '@ant-design/icons'
 
 function PricePage() {
 	return (
-		<section id='price' className='border-b border-[#f03226]'>
+		<section id='price' className='border-b border-[#038fd4]'>
 			<div className='fon3'>
 				<div className='h-20'></div>
 				<div className='container'>
@@ -12,7 +12,7 @@ function PricePage() {
 						<h2 className='text-[#fff] text-4xl '>
 							Цены
 						</h2>
-						<LineOutlined style={{ color: '#f03226', fontSize: '3em' }} />
+						<LineOutlined style={{ color: '#038fd4', fontSize: '3em' }} />
 					</div>
 
 

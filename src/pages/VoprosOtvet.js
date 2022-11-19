@@ -7,9 +7,10 @@ import { useScreens } from '../Constants/constants'
 function VoprosOtvet() {
 	const screens = useScreens()
 
+	const color = '038fd4'
 
 	return (
-		<footer id='vopros' className='border-b border-[#f03226]'>
+		<footer id='vopros' className='border-b border-[#038fd4]'>
 
 			<div className='fon2'>
 				<div className='h-12'></div>
@@ -19,7 +20,7 @@ function VoprosOtvet() {
 							<h2 className='text-white text-4xl'>
 								Часто задаваемые вопросы
 							</h2>
-							<LineOutlined style={{ color: '#f03226', fontSize: '3em' }} />
+							<LineOutlined style={{ color, fontSize: '3em' }} />
 						</div>
 
 						<div className='pl-10'>

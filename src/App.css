@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+	--bg: #038fd4;
+	--col: #343434;
+}
+
 .app{
 	overflow: hidden;
 	display: flex;
@@ -12,7 +17,8 @@
 
  button, [type='button'], [type='reset'], [type='submit'] {
 	-webkit-appearance: button;
-	background-color: #f03226;
+	/* background-color: #f03226; */
+	background-color: var(--bg);
 	opacity: .9;
 	background-image: none;
 
@@ -37,7 +43,8 @@ img{
 	color:#959595 !important;
 }
 .hover-icon:hover{
-	color: #f03226 !important;
+	/* color: #f03226 !important; */
+	color: var(--bg) !important;
 }
 
 .bg-gray-gradient {
@@ -47,20 +54,20 @@ img{
 }
 
 .ant-table-tbody {
-	background-color: #343434;
+	background-color: var(--col);
 	color: #fff;
  }
  .ant-table-thead .ant-table-cell{
-	background-color: #343434 !important;
+	background-color: var(--col) !important;
 	color: #fff !important;
  }
 
  .ant-table-row-expand-icon{
-	background: #343434 !important;
+	background: var(--col) !important;
  }
 
  .ant-table-expanded-row .ant-table-cell{
-	background-color: #343434;
+	background-color: var(--col);
  }
 
  
@@ -107,9 +114,17 @@ img{
 	width: 100%;
 	/* min-height: 100vh; */
 }
+.main-block-mobile{
+	background: #4e4b4b url(./images/1221.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-blend-mode: multiply;
+	width: 100%;
+}
 
 .fon2{
-	background: #343434 url(./images/fon.webp);
+	background: var(--col) url(./images/fon.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -118,7 +133,7 @@ img{
 	background-blend-mode: multiply;
 }
 .fon3{
-	background: #343434 url(./images/fon1.webp);
+	background: var(--col) url(./images/fon1.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -127,7 +142,7 @@ img{
 	background-blend-mode: multiply;
 }
 .fon4{
-	background: #343434 url(./images/fon2.webp);
+	background: var(--col) url(./images/fon2.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;

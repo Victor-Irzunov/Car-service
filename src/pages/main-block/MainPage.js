@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useRef, useEffect } from 'react'
 import {
 	Row, Col, Button, Space, Badge, Tooltip,
 	notification,
@@ -14,10 +14,14 @@ import {
 import { useScreens } from '../../Constants/constants'
 import DrawerWindow from '../../components/drawer/DrawerWindow'
 
+
+
 function MainPage() {
 	const screens = useScreens()
 	const [active, setActive] = useState(1)
 	const [open, setOpen] = useState(false)
+
+	
 
 	const showDrawer = () => {
 		setOpen(true)
@@ -47,9 +51,16 @@ function MainPage() {
 		message.info('Звонок администратору')
 	}
 
+	useEffect(() => {
+		if (navigator.userAgent.toLowerCase().match(/(ipad|iphone)/)) {
+			alert("Вы используете Safari браузер.");
+	  }
+},[])
+	
+
 
 	return (
-		<section id='home' className='main-section border-b border-t border-[#f03226]'>
+		<section id='home' className='main-section border-b border-t border-[#038fd4]'>
 			{/* <div className='flex justify-between absolute top-0'>
 				{Object.entries(screens)
 					.filter((screen) => !!screen[1])
@@ -127,7 +138,7 @@ function MainPage() {
 									</a>
 
 									<a href='tel:80290000000'
-										className='mt-4 text-sm text-[#f03226]'
+										className='mt-4 text-sm text-[#038fd4]'
 									>Позвонить администратору</a>
 								</div>
 							}
@@ -170,12 +181,12 @@ function MainPage() {
 							</div>
 						</Col>
 
-
+						{/* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */}
 
 						<Col lg={12} md={24} sm={24} xs={24}>
 							<div className='w-full h-full flex justify-center items-end mt-16'>
 								<div
-									className='bg-[#f03226] w-full h-96 
+									className='bg-gradient-to-r from-sky-500 to-indigo-500 w-full h-96 
 									rounded-3xl opacity-80 relative
 									overflow-hidden
 									'
@@ -216,7 +227,7 @@ function MainPage() {
 								onClick={() => openNotification('topLeft', 'Условия рассрочки', 'Рассрочку предоставляет банк-партнер. Вы можете оформить одну из карт Халва и получить выгодные условия.')}
 							/>
 							<p className='text-white mt-3'>
-								Ремонт в <span className='text-[#f03226]'>рассрочку</span>
+								Ремонт в <span className='text-[#fff]'>рассрочку</span>
 							</p>
 						</div>
 
@@ -229,7 +240,7 @@ function MainPage() {
 								onClick={() => openNotification('bottomLeft', 'Мойка автомобиля в Подарок при ремонте', 'Просторный комплекс включает в себя несколько боксов технического обслуживания, оборудованных подъемниками с профессиональным стендом развала-схождения в виде объемного изображения. На территории помещения расположено высокоточное оборудование, хозяйственные помещения и ')}
 							/>
 							<p className='text-white mt-3'>
-								Мойка авто в <span className='text-[#f03226]'>подарок</span>
+								Мойка авто в <span className='text-[#fff]'>подарок</span>
 							</p>
 						</div>
 
@@ -242,7 +253,7 @@ function MainPage() {
 								onClick={() => openNotification('topRight', 'Проточка дисков', 'Наш специализированный автосервис оказывает в Минске квалифицированные услуги по проточке тормозных дисков без снятия и со снятием. В процессе проведения работ мы используем профессиональное импортное оборудование, что позволяет гарантировать высокое качество и оперативные сроки.')}
 							/>
 							<p className='text-white mt-3'>
-								Проточка дисков со <span className='text-[#f03226]'>скидкой 20%</span>
+								Проточка дисков со <span className='text-[#fff]'>скидкой 20%</span>
 							</p>
 						</div>
 
@@ -255,7 +266,7 @@ function MainPage() {
 								onClick={() => openNotification('bottomRight', 'Диагностика авто будет бесплатная', 'Если  будут выполняться ремонтные работы по устранению неисправностей обнаруженных в ходе диагностики.')}
 							/>
 							<p className='text-white mt-3'>
-								Диагностика <span className='text-[#f03226]'>бесплатно</span>
+								Диагностика <span className='text-[#fff]'>бесплатно</span>
 							</p>
 						</div>
 

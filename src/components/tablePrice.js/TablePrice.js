@@ -219,20 +219,20 @@ const TablePrice = () => {
 	const [isActive2, setIsActive2] = useState(false)
 	const [isActive3, setIsActive3] = useState(false)
 
-
+const color = '#fff'
 
 	return (
 		<>
 			<div className='flex justify-center mt-5'
 				onClick={() => setIsActive1(i => !i)}
 			>
-				{isActive1 ? <DownOutlined style={{ fontSize: '1.2em', color: '#f03226' }} className='mr-3' />
+				{isActive1 ? <DownOutlined style={{ fontSize: '1.2em', color }} className='mr-3' />
 					:
-					<RightOutlined style={{ fontSize: '1.2em', color: '#f03226' }} className='mr-3' />
+					<RightOutlined style={{ fontSize: '1.2em', color }} className='mr-3' />
 				}
 				<h3
 					className='text-xl pr-2 mb-0 
-				text-[#f03226] 
+					text-[#fff] 
 				font-bold cursor-pointer'
 				>
 					Подвеска
@@ -267,14 +267,14 @@ const TablePrice = () => {
 			<div className='flex justify-center mt-5'
 				onClick={() => setIsActive2(i => !i)}
 			>
-				{isActive2 ? <DownOutlined style={{ fontSize: '1.2em', color: '#f03226' }} className='mr-3' />
+				{isActive2 ? <DownOutlined style={{ fontSize: '1.2em', color }} className='mr-3' />
 					:
-					<RightOutlined style={{ fontSize: '1.2em', color: '#f03226' }} className='mr-3' />
+					<RightOutlined style={{ fontSize: '1.2em', color }} className='mr-3' />
 				}
 				<h3
-					className='text-xl mb-0
-				text-[#f03226] 
-				font-bold cursor-pointer'
+					className={`text-xl mb-0
+					text-[#fff] 
+				font-bold cursor-pointer`}
 
 				>
 					Электрика
@@ -306,13 +306,13 @@ const TablePrice = () => {
 			<div className='flex justify-center mt-5'
 				onClick={() => setIsActive3(i => !i)}
 			>
-				{isActive3 ? <DownOutlined style={{ fontSize: '1.2em', color: '#f03226' }} className='mr-4' />
+				{isActive3 ? <DownOutlined style={{ fontSize: '1.2em', color }} className='mr-4' />
 					:
-					<RightOutlined style={{ fontSize: '1.2em', color: '#f03226' }} className='mr-4' />
+					<RightOutlined style={{ fontSize: '1.2em', color }} className='mr-4' />
 				}
 				<h3
 					className='text-xl mb-0 
-				text-[#f03226] 
+					text-[#fff]  
 				font-bold cursor-pointer'
 
 				>

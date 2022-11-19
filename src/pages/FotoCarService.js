@@ -8,8 +8,11 @@ import foto4 from '../images/foto-service/service-4.webp'
 
 
 function FotoCarService() {
+
+	const color = '038fd4'
+	
 	return (
-		<section id='foto' className='border-b border-[#f03226]'>
+		<section id='foto' className='border-b border-[#038fd4]'>
 			<div className='fon4'>
 				<div className='h-20'></div>
 					<div className='container'>
@@ -17,7 +20,7 @@ function FotoCarService() {
 							<h2 className='text-white text-3xl'>
 								Фото нашего автосервиса
 							</h2>
-							<LineOutlined style={{ color: '#f03226', fontSize: '3em' }} />
+							<LineOutlined style={{ color, fontSize: '3em' }} />
 						</div>
 
 						<div className='mt-12'>
