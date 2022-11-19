@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { LineOutlined } from '@ant-design/icons'
 import CollapseComp from '../components/collapse/CollapseComp'
 import { useScreens } from '../Constants/constants'
-
+import { Context } from '../App'
 
 function VoprosOtvet() {
 	const screens = useScreens()
-
+	const { data } = useContext(Context)
 	const color = '038fd4'
 
 	return (
 		<footer id='vopros' className='border-b border-[#038fd4]'>
 
-			<div className='fon2'>
+			<div className={data ? 'fon2-mobile' : 'fon2'}>
 				<div className='h-12'></div>
 				<div className='container'>
 					<div className='flex flex-col justify-between'>

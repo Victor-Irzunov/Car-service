@@ -1,19 +1,20 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Row, Col, Image } from 'antd'
 import { LineOutlined } from '@ant-design/icons'
 import foto1 from '../images/foto-service/service-1.webp'
 import foto2 from '../images/foto-service/service-2.webp'
 import foto3 from '../images/foto-service/service-3.webp'
 import foto4 from '../images/foto-service/service-4.webp'
+import {Context} from '../App'
 
 
 function FotoCarService() {
-
+	const { data } = useContext(Context)
 	const color = '038fd4'
-	
+
 	return (
 		<section id='foto' className='border-b border-[#038fd4]'>
-			<div className='fon4'>
+			<div className={data ? 'fon4-mobile':'fon4'}>
 				<div className='h-20'></div>
 					<div className='container'>
 						<div className='text-center'>

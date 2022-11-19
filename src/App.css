@@ -6,7 +6,11 @@
 :root{
 	--bg: #038fd4;
 	--col: #343434;
+	--colTab: #dedede;
+	--hov: #5c5b5b;
 }
+/* --col: #343434; */
+
 
 .app{
 	overflow: hidden;
@@ -54,28 +58,28 @@ img{
 }
 
 .ant-table-tbody {
-	background-color: var(--col);
-	color: #fff;
+	background-color: var(--colTab);
+	/* color: #fff; */
  }
  .ant-table-thead .ant-table-cell{
-	background-color: var(--col) !important;
-	color: #fff !important;
+	background-color: var(--colTab) !important;
+	/* color: #fff !important; */
  }
 
  .ant-table-row-expand-icon{
-	background: var(--col) !important;
+	background: var(--colTab) !important;
  }
 
  .ant-table-expanded-row .ant-table-cell{
-	background-color: var(--col);
+	background-color: var(--colTab);
  }
 
  
  .ant-table-tbody>tr.ant-table-row:hover>td, .ant-table-tbody>tr>td.ant-table-cell-row-hover{
-	background: #5c5b5b !important;
+	/* background: var(--hov) !important; */
  }
  tr.ant-table-expanded-row:hover>td {
-	background: #5c5b5b !important;
+	/* background: var(--hov) !important; */
 }
 
 .ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow svg{
@@ -123,6 +127,8 @@ img{
 	width: 100%;
 }
 
+
+
 .fon2{
 	background: var(--col) url(./images/fon.webp);
 	background-size: cover;
@@ -132,6 +138,17 @@ img{
 	width: 100%;
 	background-blend-mode: multiply;
 }
+.fon2-mobile{
+	background: var(--col) url(./images/fon5.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	background-blend-mode: multiply;
+}
+
+
+
 .fon3{
 	background: var(--col) url(./images/fon1.webp);
 	background-size: cover;
@@ -141,11 +158,29 @@ img{
 	width: 100%;
 	background-blend-mode: multiply;
 }
+.fon3-mobile{
+	background: var(--col) url(./images/03.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 100%;
+	background-blend-mode: multiply;
+}
+
+
 .fon4{
 	background: var(--col) url(./images/fon2.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	background-position: center center;
+	width: 100%;
+	background-blend-mode: multiply;
+}
+.fon4-mobile{
+	background: var(--col) url(./images/04.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: center center;
 	width: 100%;
 	background-blend-mode: multiply;

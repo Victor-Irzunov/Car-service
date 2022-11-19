@@ -1,4 +1,4 @@
-import { Table, Image, Button } from 'antd'
+import { Table, Image, Divider } from 'antd'
 import React, { useState } from 'react'
 import { DownOutlined, RightOutlined } from '@ant-design/icons'
 import imageGajka from '../../images/foto-price/1.webp'
@@ -219,11 +219,12 @@ const TablePrice = () => {
 	const [isActive2, setIsActive2] = useState(false)
 	const [isActive3, setIsActive3] = useState(false)
 
-const color = '#fff'
+	const color = '#000'
+	const text = 'text-[#000]'
 
 	return (
 		<>
-			<div className='flex justify-center mt-5'
+			<div className='flex justify-start mt-5'
 				onClick={() => setIsActive1(i => !i)}
 			>
 				{isActive1 ? <DownOutlined style={{ fontSize: '1.2em', color }} className='mr-3' />
@@ -231,9 +232,9 @@ const color = '#fff'
 					<RightOutlined style={{ fontSize: '1.2em', color }} className='mr-3' />
 				}
 				<h3
-					className='text-xl pr-2 mb-0 
-					text-[#fff] 
-				font-bold cursor-pointer'
+					className={`text-xl pr-2 mb-0 
+					 ${text}
+				font-bold cursor-pointer`}
 				>
 					Подвеска
 				</h3>
@@ -262,9 +263,9 @@ const color = '#fff'
 				/>
 			}
 
+			{!isActive1 && <Divider />}
 
-
-			<div className='flex justify-center mt-5'
+			<div className='flex justify-start mt-5'
 				onClick={() => setIsActive2(i => !i)}
 			>
 				{isActive2 ? <DownOutlined style={{ fontSize: '1.2em', color }} className='mr-3' />
@@ -273,7 +274,7 @@ const color = '#fff'
 				}
 				<h3
 					className={`text-xl mb-0
-					text-[#fff] 
+					${text}
 				font-bold cursor-pointer`}
 
 				>
@@ -301,9 +302,9 @@ const color = '#fff'
 					dataSource={dataElektrika}
 				/>
 			}
+			{!isActive2 && <Divider />}
 
-
-			<div className='flex justify-center mt-5'
+			<div className='flex justify-start mt-5 mb-5'
 				onClick={() => setIsActive3(i => !i)}
 			>
 				{isActive3 ? <DownOutlined style={{ fontSize: '1.2em', color }} className='mr-4' />
@@ -311,9 +312,9 @@ const color = '#fff'
 					<RightOutlined style={{ fontSize: '1.2em', color }} className='mr-4' />
 				}
 				<h3
-					className='text-xl mb-0 
-					text-[#fff]  
-				font-bold cursor-pointer'
+					className={`text-xl mb-0
+					${text}
+				font-bold cursor-pointer`}
 
 				>
 					Двигатель

@@ -23,9 +23,6 @@ function MainPage() {
 	const [active, setActive] = useState(1)
 	const [open, setOpen] = useState(false)
 
-	useEffect(() => {
-		if (data) alert("Вы используете Iphone.");
-	}, [data])
 
 	const showDrawer = () => {
 		setOpen(true)
@@ -183,7 +180,7 @@ function MainPage() {
 
 						{/* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */}
 						{
-							!data &&
+							!screens.xs &&
 
 							<Col lg={12} md={24} sm={24} xs={24}>
 								<div className='w-full h-full flex justify-center items-end mt-16'>
