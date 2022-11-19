@@ -1,4 +1,4 @@
-import React, { useState,useRef, useEffect } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import {
 	Row, Col, Button, Space, Badge, Tooltip,
 	notification,
@@ -13,15 +13,19 @@ import {
 } from '@ant-design/icons'
 import { useScreens } from '../../Constants/constants'
 import DrawerWindow from '../../components/drawer/DrawerWindow'
+import { Context } from '../../App'
 
 
 
 function MainPage() {
+	const { data } = useContext(Context)
 	const screens = useScreens()
 	const [active, setActive] = useState(1)
 	const [open, setOpen] = useState(false)
 
-	
+	useEffect(() => {
+		if (data) alert("Вы используете Iphone.");
+	}, [data])
 
 	const showDrawer = () => {
 		setOpen(true)
@@ -41,22 +45,18 @@ function MainPage() {
 					}}
 				/>
 			),
-		});
-	};
+		})
+	}
 
 
 	const toggleBtn = (num) => setActive(num)
 
 	const confirm = () => {
-		message.info('Звонок администратору')
+		message.info('Звонок на станцию')
 	}
 
-	useEffect(() => {
-		if (navigator.userAgent.toLowerCase().match(/(ipad|iphone)/)) {
-			alert("Вы используете Safari браузер.");
-	  }
-},[])
-	
+
+
 
 
 	return (
@@ -91,7 +91,7 @@ function MainPage() {
 
 
 
-			<div className='main-block'>
+			<div className={data ? 'main-block-mobile' : 'main-block'}>
 				<div className='container'>
 					<div className='h-20'></div>
 
@@ -182,42 +182,45 @@ function MainPage() {
 						</Col>
 
 						{/* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */}
+						{
+							!data &&
 
-						<Col lg={12} md={24} sm={24} xs={24}>
-							<div className='w-full h-full flex justify-center items-end mt-16'>
-								<div
-									className='bg-gradient-to-r from-sky-500 to-indigo-500 w-full h-96 
+							<Col lg={12} md={24} sm={24} xs={24}>
+								<div className='w-full h-full flex justify-center items-end mt-16'>
+									<div
+										className='bg-gradient-to-r from-sky-500 to-indigo-500 w-full h-96 
 									rounded-3xl opacity-80 relative
 									overflow-hidden
 									'
-								>
-									<span
-										className='absolute top-[75%] 
+									>
+										<span
+											className='absolute top-[75%] 
 									right-0 left-[85%] rotate-[270deg]
 									text-5xl font-bold
 									'>
-										#автосервис
-									</span>
-									<div
-										className='
+											#автосервис
+										</span>
+										<div
+											className='
 										absolute t-[50%]
 										bottom-[35%]
 										left-5  font-bold'>
-										<p className={`text-white ${screens.xs && 'text-3xl'}  ${screens.sm && 'text-4xl'} ${screens.xl && 'text-4xl'}`}>Опыт работы 10+ лет</p>
-										<p className='text-white text-2xl'>Дружелюбный персонал</p>
-										<p className='text-white text-xl'>Акции и скидки</p>
-										<p className='text-white text-sm'>Делаем на совесть</p>
+											<p className={`text-white ${screens.xs && 'text-3xl'}  ${screens.sm && 'text-4xl'} ${screens.xl && 'text-4xl'}`}>Опыт работы 10+ лет</p>
+											<p className='text-white text-2xl'>Дружелюбный персонал</p>
+											<p className='text-white text-xl'>Акции и скидки</p>
+											<p className='text-white text-sm'>Делаем на совесть</p>
+										</div>
+										<span className='absolute top-1 right-16 text-[#ffffff0d] text-[7vw]'>best</span>
+										<span className='absolute bottom-1 left-8 font-bold text-[#ffffff0d] text-[12vw]'>best</span>
 									</div>
-									<span className='absolute top-1 right-16 text-[#ffffff0d] text-[7vw]'>best</span>
-									<span className='absolute bottom-1 left-8 font-bold text-[#ffffff0d] text-[12vw]'>best</span>
 								</div>
-							</div>
-						</Col>
+							</Col>
+						}
 					</Row>
 
 
 
-					<div className={`mt-40 flex justify-between ${screens.xs && 'pl-5'} ${screens.xs ? 'flex-col': 'flex-wrap'}`}>
+					<div className={`mt-40 flex justify-between ${screens.xs && 'pl-5'} ${screens.xs ? 'flex-col' : 'flex-wrap'}`}>
 						<div>
 							<Button
 								type="primary"
