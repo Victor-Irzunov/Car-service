@@ -9,7 +9,7 @@ import foto4 from '../images/foto-service/service-4.webp'
 
 function FotoCarService() {
 	return (
-		<section className='border-b border-[#f03226]'>
+		<section id='foto' className='border-b border-[#f03226]'>
 			<div className='fon4'>
 				<div className='h-20'></div>
 					<div className='container'>

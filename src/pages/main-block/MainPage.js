@@ -49,7 +49,7 @@ function MainPage() {
 
 
 	return (
-		<section className='main-section border-b border-t border-[#f03226]'>
+		<section id='home' className='main-section border-b border-t border-[#f03226]'>
 			{/* <div className='flex justify-between absolute top-0'>
 				{Object.entries(screens)
 					.filter((screen) => !!screen[1])

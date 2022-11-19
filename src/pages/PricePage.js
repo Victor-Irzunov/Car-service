@@ -4,7 +4,7 @@ import { LineOutlined } from '@ant-design/icons'
 
 function PricePage() {
 	return (
-		<section className='border-b border-[#f03226]'>
+		<section id='price' className='border-b border-[#f03226]'>
 			<div className='fon3'>
 				<div className='h-20'></div>
 				<div className='container'>

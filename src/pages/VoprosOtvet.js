@@ -9,7 +9,7 @@ function VoprosOtvet() {
 
 
 	return (
-		<footer className='border-b border-[#f03226]'>
+		<footer id='vopros' className='border-b border-[#f03226]'>
 
 			<div className='fon2'>
 				<div className='h-12'></div>
