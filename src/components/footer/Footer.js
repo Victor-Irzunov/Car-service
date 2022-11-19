@@ -9,11 +9,12 @@ function Footer() {
     <footer
       className='mt-auto'
       style={{
-        background: '#363636',
+        // background: '#363636',
       }}
     >
-      <Divider />
-      <div class="footer__line"><div class="inner"></div></div>
+      <div className='h-32'></div>
+      {/* <Divider /> */}
+      {/* <div className="footer__line"><div className="inner"></div></div> */}
 
       <div className='container'>
 
@@ -32,18 +33,7 @@ function Footer() {
         </div>
 
 
-        {/* <div className='flex justify-between'>
-        <Affix offsetBottom={20}>
-          {Object.entries(screens)
-            .filter((screen) => !!screen[1])
-            .map((screen) => (
-              <Tag color="blue" key={screen[0]}>
-                {screen[0]}
-              </Tag>
-            ))}
-          </Affix>
-          <div><h2 className='text-white'>faf;gkf;gkafgm</h2></div>
-        </div> */}
+      
 
 
         

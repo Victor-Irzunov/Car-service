@@ -1,6 +1,4 @@
-@import '~antd/dist/antd.css';
-
-
+/* @import '~antd/dist/antd.css'; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +10,13 @@
 	min-height: 100vh;
  }
 
+ button, [type='button'], [type='reset'], [type='submit'] {
+	-webkit-appearance: button;
+	background-color: #f03226;
+	opacity: .9;
+	background-image: none;
+
+}
 
  svg,
 video,
@@ -42,33 +47,41 @@ img{
 }
 
 .ant-table-tbody {
-	background-color: #302f2f;
+	background-color: #343434;
 	color: #fff;
  }
  .ant-table-thead .ant-table-cell{
-	background-color: #302f2f;
-	color: #fff;
+	background-color: #343434 !important;
+	color: #fff !important;
  }
+
  .ant-table-row-expand-icon{
-	background: #302f2f !important;
+	background: #343434 !important;
  }
 
  .ant-table-expanded-row .ant-table-cell{
-	background-color: #353434;
+	background-color: #343434;
  }
 
  
  .ant-table-tbody>tr.ant-table-row:hover>td, .ant-table-tbody>tr>td.ant-table-cell-row-hover{
-	background: #f03226 !important;
+	background: #5c5b5b !important;
  }
  tr.ant-table-expanded-row:hover>td {
-	background: #f03226 !important;
+	background: #5c5b5b !important;
 }
 
-footer{
-	position: relative;
+.ant-collapse>.ant-collapse-item>.ant-collapse-header .ant-collapse-arrow svg{
+	color: #fff;
 }
-.footer__line {
+
+
+.ant-table-title{
+	background: #302f2f;
+}
+
+
+/* .footer__line {
 	height: 48px;
 	left: 0;
 	overflow: hidden;
@@ -81,27 +94,48 @@ footer{
 	border-radius: 50%;
 	height: 192px;
 	width: 100%;
-}
+} */
+
 
 .main-block{
-	background-image: url(./images/1221.webp);
+	background: #4e4b4b url(./images/1221.webp);
 	background-size: cover;
-	position: fixed;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-blend-mode: multiply;
 	width: 100%;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: -1;
+	/* min-height: 100vh; */
 }
-.main-block::after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
+
+.fon2{
+	background: #343434 url(./images/fon.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
 	width: 100%;
-	height: 100vh;
-	background-color: #302f2f;
-	opacity: .9;
-	z-index: 1;
+	background-blend-mode: multiply;
 }
+.fon3{
+	background: #343434 url(./images/fon1.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	width: 100%;
+	background-blend-mode: multiply;
+}
+.fon4{
+	background: #343434 url(./images/fon2.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	width: 100%;
+	background-blend-mode: multiply;
+}
+
+
+
+

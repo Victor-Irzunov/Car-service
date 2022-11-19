@@ -1,17 +1,26 @@
 import React from 'react'
 import TablePrice from '../components/tablePrice.js/TablePrice'
+import { LineOutlined } from '@ant-design/icons'
 
 function PricePage() {
 	return (
-		<section className='bg-[#363636] pt-24 pb-10'>
-			<div className='container'>
-				<h2 className='text-white text-3xl text-center'>
-					Цены
-				</h2>
+		<section className='border-b border-[#f03226]'>
+			<div className='fon3'>
+				<div className='h-20'></div>
+				<div className='container'>
+					<div className='text-center'>
+						<h2 className='text-[#fff] text-4xl '>
+							Цены
+						</h2>
+						<LineOutlined style={{ color: '#f03226', fontSize: '3em' }} />
+					</div>
 
-				<div className='bg-[#302f2f] mt-12 p-4  rounded-3xl'>
-					<TablePrice />
+
+					<div className='bg-[#343434] mt-12 p-4 rounded-3xl'>
+						<TablePrice />
+					</div>
 				</div>
+				<div className='h-20'></div>
 			</div>
 		</section>
 	)

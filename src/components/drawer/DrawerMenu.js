@@ -70,9 +70,9 @@ const DrawerMenu = ({ open, setOpen }) => {
 						</Tooltip>
 					</div>
 					<Divider />
-					<div className='pb-6 pl-8 pr-8 flex justify-between'>
+					<div className='pb-6 pl-8 pr-8 flex justify-around'>
 
-						<img src={logoMini} className='w-[40%]' style={{}} />
+						{/* <img src={logoMini} className='w-[40%]' style={{}} /> */}
 						<InstagramOutlined style={{ fontSize: '2em' }} />
 						<WhatsAppOutlined style={{ fontSize: '2em' }} />
 						<YoutubeOutlined style={{ fontSize: '2em' }} />

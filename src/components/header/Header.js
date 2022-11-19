@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Badge, Popover } from 'antd'
 import { NotificationOutlined, MenuFoldOutlined, ExclamationOutlined } from '@ant-design/icons'
-import logo from '../../images/logo-2.webp'
+import logo from '../../images/logo-3.webp'
 import DrawerMenu from '../drawer/DrawerMenu'
 
 
@@ -25,8 +25,8 @@ function Header() {
 		<header
 			className="fixed top-0
 			left-0 right-0
-			z-50 pt-2 pb-2
-			bg-[#363636]
+			z-50 pt-1 pb-1
+			bg-transparent	
 			"
 			style={{ boxShadow: '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0)' }}
 		>
@@ -42,7 +42,7 @@ function Header() {
 						</Popover>
 					</div>
 
-					<img src={logo} className='w-2/12' />
+					<img src={logo} className='w-40' />
 
 
 					<MenuFoldOutlined

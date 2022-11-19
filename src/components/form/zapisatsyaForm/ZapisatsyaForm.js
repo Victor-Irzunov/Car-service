@@ -81,12 +81,12 @@ const ZapisatsyaForm = () => {
 	return (
 		<Form
 			name="basic"
-			labelCol={{
-				span: 5,
-			}}
-			wrapperCol={{
-				span: 14,
-			}}
+			// labelCol={{
+			// 	span: 5,
+			// }}
+			// wrapperCol={{
+			// 	span: 14,
+			// }}
 			layout="horizontal"
 
 			onFinish={onFinish}
