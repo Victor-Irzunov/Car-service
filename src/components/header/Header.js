@@ -31,7 +31,7 @@ function Header() {
 			style={{ boxShadow: '0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0)' }}
 		>
 			<div className='container'>
-				<div className='flex justify-between align-middle'>
+				<div className='flex justify-between align-middle pl-2 pr-2'>
 					<div className='mt-3'>
 						<Popover placement="rightBottom" title={text} content={content} trigger="click">
 

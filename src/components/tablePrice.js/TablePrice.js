@@ -223,7 +223,7 @@ const TablePrice = () => {
 
 	return (
 		<>
-			<div className='flex justify-center'
+			<div className='flex justify-center mt-5'
 				onClick={() => setIsActive1(i => !i)}
 			>
 				{isActive1 ? <DownOutlined style={{ fontSize: '1.2em', color: '#f03226' }} className='mr-3' />
@@ -264,7 +264,7 @@ const TablePrice = () => {
 
 
 
-			<div className='flex justify-center'
+			<div className='flex justify-center mt-5'
 				onClick={() => setIsActive2(i => !i)}
 			>
 				{isActive2 ? <DownOutlined style={{ fontSize: '1.2em', color: '#f03226' }} className='mr-3' />
@@ -303,7 +303,7 @@ const TablePrice = () => {
 			}
 
 
-			<div className='flex justify-center'
+			<div className='flex justify-center mt-5'
 				onClick={() => setIsActive3(i => !i)}
 			>
 				{isActive3 ? <DownOutlined style={{ fontSize: '1.2em', color: '#f03226' }} className='mr-4' />
