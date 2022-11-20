@@ -354,7 +354,7 @@ const TablePrice = () => {
 					return (
 						<div key={idx}>
 							<div
-								className='flex justify-start mt-5'
+								className='flex justify-start mt-3 mb-3'
 								onClick={() => f1(Object.keys(el)[0])}
 								key={idx}
 							>
@@ -362,7 +362,7 @@ const TablePrice = () => {
 									:
 									<RightOutlined style={{ fontSize: '.8em', color }} className='mr-3' />
 								}
-								<h3 className={`text-sm pr-2 mb-0 ${text} font-bold cursor-pointer`}>
+								<h3 className={`pr-2 mb-0 ${text} font-bold cursor-pointer`}>
 									{Object.keys(el)}
 								</h3>
 							</div>
