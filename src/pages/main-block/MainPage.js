@@ -187,7 +187,7 @@ function MainPage() {
 							</Col>
 						}
 					</Row>
-					<div className={`mt-40 flex justify-between ${screens.xs && 'pl-5'} ${screens.xs ? 'flex-col' : 'flex-wrap'}`}>
+					<div className={`${screens.xs ? 'mt-20':'mt-40'} flex justify-between ${screens.xs && 'pl-5'} ${screens.xs ? 'flex-col' : 'flex-wrap'}`}>
 						<div>
 							<Button
 								type="primary"
