@@ -1,4 +1,4 @@
-import { Table, Image, Divider } from 'antd'
+import { Table, Image } from 'antd'
 import React, { useState } from 'react'
 import { DownOutlined, RightOutlined } from '@ant-design/icons'
 import imageGajka from '../../images/foto-price/1.webp'
@@ -8,7 +8,6 @@ import imageAmortizator from '../../images/foto-price/4.webp'
 import imageRichag from '../../images/foto-price/5.webp'
 import imageDiagnostik from '../../images/foto-price/6.webp'
 import imageLampa from '../../images/foto-price/7.webp'
-
 
 const columns = [
 	{
@@ -32,7 +31,6 @@ const columns = [
 	},
 	Table.EXPAND_COLUMN,
 ]
-
 const data = [
 	{
 		'Подвеска': [
@@ -748,10 +746,6 @@ const data = [
 		]
 	},
 ]
-
-
-
-
 const TablePrice = () => {
 	const [active, setActive] = useState({
 		'Подвеска': false,
@@ -767,17 +761,14 @@ const TablePrice = () => {
 		'Диагностика авто': false,
 		'Другое': false,
 	})
-
 	const f1 = key => {
 		for (let el in active) {
 			if (el === key) setActive({...active, [key]: !active[key]})
 		}
 	}
 
-
 	const color = '#fff'
 	const text = 'text-[#fff]'
-
 	return (
 		<>
 			{

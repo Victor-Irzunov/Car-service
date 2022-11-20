@@ -1,50 +1,31 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react'
 import { Badge, Popover } from 'antd'
-import { NotificationOutlined, MenuFoldOutlined, ExclamationOutlined } from '@ant-design/icons'
+import { NotificationOutlined, MenuFoldOutlined } from '@ant-design/icons'
 import logo from '../../images/logo-5.webp'
 import DrawerMenu from '../drawer/DrawerMenu'
 import { useScreens } from '../../Constants/constants'
-
-
-const text = <span className='text-xl text-orange-500'><ExclamationOutlined style={{ color: 'orange', fontSize: '1.5em' }} /> Не пропустите</span>
+const text = <span className='text-xl text-orange-500'>Не пропустите</span>
 const content = (
 	<div>
-		<p className='text-lg'>Только до конца 2022 года продлится акция</p>
-		<p>на ремонт
-			подвески скидка <span className='text-lg text-orange-500 font-bold'>15%</span>
+		<p className='text-lg'>Только до конца года продлится акция</p>
+		<p>на ремонт подвески скидка <span className='text-lg text-orange-500 font-bold'>10%</span>
 		</p>
 	</div>
 )
-
-
 function Header() {
 	const [open, setOpen] = useState(false)
 	const screens = useScreens()
-
 	const el = useRef(null)
-
-	const showDrawer = () => {
-		setOpen(true)
-	}
-
-
+	const showDrawer = () => setOpen(true)
 	const handleScrollMain = useCallback(() => {
 		el.current.style.transition = '1.5s'
-		if (window.pageYOffset > 100) {
-			el.current.style.opacity = '0'
-		}
-		if (window.pageYOffset < 100) {
-			el.current.style.opacity = '1'
-		}
+		if (window.pageYOffset > 100) el.current.style.opacity = '0'
+		if (window.pageYOffset < 100) el.current.style.opacity = '1'
 	}, [])
-
-
 	useEffect(() => {
 		window.addEventListener("scroll", handleScrollMain)
 		return () => window.removeEventListener("scroll", handleScrollMain)
 	}, [handleScrollMain])
-
-
 	return (
 		<header
 			className="fixed top-0
@@ -57,7 +38,7 @@ function Header() {
 			<div className='container'>
 				<div className='flex justify-between align-middle pl-2 pr-2'>
 					<div className='mt-3'>
-						<Popover placement="rightBottom" title={text} content={content} trigger="click">
+						<Popover placement="rightTop" title={text} content={content} trigger="click">
 
 							<Badge dot offset={[-1, 4]}>
 								<NotificationOutlined className={`text-2xl hover-icon`}
@@ -65,21 +46,15 @@ function Header() {
 							</Badge>
 						</Popover>
 					</div>
-
-					<img src={logo} ref={el} className={`${screens.xs ? 'w-28': 'w-40'}`} />
-
-
+					<img src={logo} ref={el} className={`${screens.xs ? 'w-28' : 'w-40'}`} />
 					<MenuFoldOutlined
 						className={`text-3xl mt-3 hover-icon`}
 						onClick={showDrawer}
 					/>
 				</div>
-
-
 			</div>
 			<DrawerMenu open={open} setOpen={setOpen} />
 		</header>
 	)
 }
-
 export default Header

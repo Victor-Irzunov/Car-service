@@ -1,14 +1,5 @@
 import { List } from 'antd'
 import React from 'react'
-
-
-// const data = [
-// 	'Главная',
-// 	'Цены',
-// 	'Фото сервиса',
-// 	'Вопрос-ответ'
-// ]
-
 const data = [
 	{
 		title: 'Главная',
@@ -27,13 +18,8 @@ const data = [
 		link:'#vopros'
 	},
 ]
-
-
-
-
 const ListMenu = ({onClose}) => (
 	<>
-
 		<List
 			size="large"
 			dataSource={data}
@@ -47,5 +33,5 @@ const ListMenu = ({onClose}) => (
 			</List.Item>}
 		/>
 	</>
-);
+)
 export default ListMenu

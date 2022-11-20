@@ -6,13 +6,9 @@ import foto2 from '../images/foto-service/service-2.webp'
 import foto3 from '../images/foto-service/service-3.webp'
 import foto4 from '../images/foto-service/service-4.webp'
 import {Context} from '../App'
-
-
 function FotoCarService() {
 	const { data } = useContext(Context)
-
 	const color = '#038fd4'
-
 	return (
 		<section id='foto' className='border-b border-[#038fd4]'>
 			<div className={data ? 'fon4-mobile':'fon4'}>
@@ -24,7 +20,6 @@ function FotoCarService() {
 							</h2>
 							<LineOutlined style={{ color, fontSize: '3em' }} />
 						</div>
-
 						<div className='mt-12'>
 							<Row gutter={[20, 20]}>
 								<Col lg={12}>
@@ -44,9 +39,7 @@ function FotoCarService() {
 					</div>
 					<div className='h-20'></div>
 			</div>
-			
 		</section>
 	)
 }
-
 export default FotoCarService

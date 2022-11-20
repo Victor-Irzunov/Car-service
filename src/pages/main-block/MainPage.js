@@ -27,7 +27,6 @@ function MainPage() {
 	const showDrawer = () => {
 		setOpen(true)
 	}
-
 	const openNotification = (placement, message, description) => {
 		notification.info({
 			message: `${message}`,
@@ -44,17 +43,8 @@ function MainPage() {
 			),
 		})
 	}
-
-
 	const toggleBtn = (num) => setActive(num)
-
-	const confirm = () => {
-		message.info('Звонок на станцию')
-	}
-
-
-
-
+	const confirm = () => message.info('Звонок на станцию')
 
 	return (
 		<section id='home' className='main-section border-b border-t border-[#038fd4]'>
@@ -67,7 +57,6 @@ function MainPage() {
 						</Tag>
 					))}
 			</div> */}
-
 			<FloatButton.Group
 				shape="circle"
 				style={{
@@ -85,22 +74,16 @@ function MainPage() {
 				</Popconfirm>
 				<FloatButton.BackTop />
 			</FloatButton.Group>
-
-
-
 			<div className={data ? 'main-block-mobile' : 'main-block'}>
 				<div className='container'>
 					<div className='h-20'></div>
-
 					<Row gutter={[10, 10]} className=''>
-
 						<Col lg={12} md={24} sm={24} xs={24}
 							className={`mt-16 ${screens.xs && 'ml-5'}`}
 						>
 							<h1 className={`text-[#fff] ${screens.xs ? 'text-[3em]' : 'text-[5em]'}`}>
 								СТО в Минске
 							</h1>
-
 							<Space className='mb-9' size={[15]}>
 								<Button type="primary" size={screens.xs ? 'small' : 'large'} ghost={active === 1 ? false : true} onClick={() => toggleBtn(1)} shape="round">
 									Телефоны
@@ -112,10 +95,8 @@ function MainPage() {
 									Режим работы
 								</Button>
 							</Space>
-
 							{active === 1 &&
 								<div className='flex flex-col text-lg pl-5'>
-
 									<a href='tel:80290000000'
 										className='mb-6 text-white'
 									>
@@ -123,9 +104,7 @@ function MainPage() {
 											+375 29 000-00-00
 										</Tooltip>
 										<Button type="primary" shape="circle" size='large' className='ml-5' icon={<PhoneOutlined />} />
-
 									</a>
-
 									<a href='tel:80290000000' className='mb-3 text-white'>
 										<Tooltip title="МТС">
 											+375 29 000-00-00
@@ -139,7 +118,6 @@ function MainPage() {
 									>Позвонить администратору</a>
 								</div>
 							}
-
 							{
 								active === 2 &&
 								<div className='text-white text-lg  pl-5'>
@@ -149,7 +127,6 @@ function MainPage() {
 									<Button type='link' href='https://yandex.by/maps/157/minsk/house/Zk4YcAJhSkcGQFtpfXVyc3hnYw==/?indoorLevel=1&ll=27.651321%2C53.932448&z=16.81' style={{ paddingLeft: '0' }} target='_blank'>Посмотреть на карте</Button>
 								</div>
 							}
-
 							{
 								active === 3 &&
 								<div className=' pl-5'>
@@ -164,7 +141,6 @@ function MainPage() {
 									</Space>
 								</div>
 							}
-
 							<div className='ml-4'>
 								<Button
 									type='primary'
@@ -177,11 +153,8 @@ function MainPage() {
 								</Button>
 							</div>
 						</Col>
-
-						{/* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */}
 						{
 							!screens.xs &&
-
 							<Col lg={12} md={24} sm={24} xs={24}>
 								<div className='w-full h-full flex justify-center items-end mt-16'>
 									<div
@@ -214,9 +187,6 @@ function MainPage() {
 							</Col>
 						}
 					</Row>
-
-
-
 					<div className={`mt-40 flex justify-between ${screens.xs && 'pl-5'} ${screens.xs ? 'flex-col' : 'flex-wrap'}`}>
 						<div>
 							<Button
@@ -230,7 +200,6 @@ function MainPage() {
 								Ремонт в <span className='text-[#fff]'>рассрочку</span>
 							</p>
 						</div>
-
 						<div>
 							<Button
 								type="primary" shape="round"
@@ -243,8 +212,6 @@ function MainPage() {
 								Мойка авто в <span className='text-[#fff]'>подарок</span>
 							</p>
 						</div>
-
-
 						<div>
 							<Button
 								type="primary" shape="round"
@@ -253,10 +220,9 @@ function MainPage() {
 								onClick={() => openNotification('topRight', 'Проточка дисков', 'Наш специализированный автосервис оказывает в Минске квалифицированные услуги по проточке тормозных дисков без снятия и со снятием. В процессе проведения работ мы используем профессиональное импортное оборудование, что позволяет гарантировать высокое качество и оперативные сроки.')}
 							/>
 							<p className='text-white mt-3'>
-								Проточка дисков со <span className='text-[#fff]'>скидкой 20%</span>
+								Проточка дисков со <span className='text-[#fff]'>скидкой 10%</span>
 							</p>
 						</div>
-
 						<div>
 							<Button
 								type="primary" shape="round"
@@ -269,18 +235,10 @@ function MainPage() {
 								Диагностика <span className='text-[#fff]'>бесплатно</span>
 							</p>
 						</div>
-
 					</div>
-
 				</div>
-
-
-
 				<DrawerWindow open={open} setOpen={setOpen} />
-
-
 			</div>
-
 		</section>
 	)
 }

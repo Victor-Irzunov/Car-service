@@ -3,7 +3,6 @@ import TablePrice from '../components/tablePrice.js/TablePrice'
 import { LineOutlined } from '@ant-design/icons'
 import { Context } from '../App'
 import { useScreens } from '../Constants/constants'
-
 function PricePage() {
 	const { data } = useContext(Context)
 	const screens = useScreens()
@@ -13,13 +12,9 @@ function PricePage() {
 				<div className='h-20'></div>
 				<div className='container'>
 					<div className='text-center'>
-						<h2 className='text-[#fff] text-4xl '>
-							Цены
-						</h2>
+						<h2 className='text-[#fff] text-4xl '>Цены</h2>
 						<LineOutlined style={{ color: '#038fd4', fontSize: '3em' }} />
 					</div>
-
-
 					<div className={`mt-12 ${screens.xs ? 'pl-3 pr-1 py-1': 'px-8'} rounded-3xl`}>
 						<TablePrice  />
 					</div>
@@ -29,5 +24,4 @@ function PricePage() {
 		</section>
 	)
 }
-
 export default PricePage
