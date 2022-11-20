@@ -20,7 +20,7 @@ function PricePage() {
 					</div>
 
 
-					<div className={`bg-[#dedede] mt-12 ${screens.xs ? 'p-2': 'p-4'} rounded-3xl`}>
+					<div className={`bg-[#fff] mt-12 ${screens.xs ? 'p-2': 'p-4'} rounded-3xl`}>
 						<TablePrice  />
 					</div>
 				</div>

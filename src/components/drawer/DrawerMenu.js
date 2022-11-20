@@ -2,7 +2,6 @@ import React from 'react'
 import { Drawer, Divider, Tooltip, Button } from 'antd'
 import { useScreens } from '../../Constants/constants'
 import ListMenu from '../listMenu/ListMenu'
-import logoMini from '../../images/mini-logo.webp'
 import {
 	InstagramOutlined,
 	WhatsAppOutlined,

@@ -7,7 +7,7 @@ import { Context } from '../App'
 function VoprosOtvet() {
 	const screens = useScreens()
 	const { data } = useContext(Context)
-	const color = '038fd4'
+	const color = '#038fd4'
 
 	return (
 		<footer id='vopros' className='border-b border-[#038fd4]'>
@@ -23,7 +23,7 @@ function VoprosOtvet() {
 							<LineOutlined style={{ color, fontSize: '3em' }} />
 						</div>
 
-						<div className='pl-10'>
+						<div className={screens.xs ? 'pl-1' : 'pl-10'}>
 							<CollapseComp />
 						</div>
 						<div className='h-16'></div>

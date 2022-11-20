@@ -10,7 +10,8 @@ import {Context} from '../App'
 
 function FotoCarService() {
 	const { data } = useContext(Context)
-	const color = '038fd4'
+
+	const color = '#038fd4'
 
 	return (
 		<section id='foto' className='border-b border-[#038fd4]'>
