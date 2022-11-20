@@ -759,6 +759,13 @@ const TablePrice = () => {
 		'Двигатель': false,
 		'Коробка передач': false,
 		'Кузов': false,
+		'Мойка авто': false,
+		'Машину трясёт': false,
+		'Машина дергается при движении': false,
+		'Машина не заводится': false,
+		'Что-то стучит': false,
+		'Диагностика авто': false,
+		'Другое': false,
 	})
 
 	const f1 = key => {
@@ -768,8 +775,8 @@ const TablePrice = () => {
 	}
 
 
-	const color = '#000'
-	const text = 'text-[#000]'
+	const color = '#fff'
+	const text = 'text-[#fff]'
 
 	return (
 		<>
@@ -778,7 +785,7 @@ const TablePrice = () => {
 					return (
 						<div key={idx}>
 							<div
-								className='flex justify-start mt-3 mb-3'
+								className='flex justify-start mt-4 mb-4'
 								onClick={() => f1(Object.keys(el)[0])}
 								key={idx}
 							>
@@ -786,7 +793,7 @@ const TablePrice = () => {
 									:
 									<RightOutlined style={{ fontSize: '.8em', color }} className='mr-3' />
 								}
-								<h3 className={`pr-2 mb-0 ${text} font-bold cursor-pointer`}>
+								<h3 className={`pr-2 mb-0 ${text} cursor-pointer`}>
 									{Object.keys(el)}
 								</h3>
 							</div>

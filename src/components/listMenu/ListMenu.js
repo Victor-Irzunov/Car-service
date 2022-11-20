@@ -31,13 +31,20 @@ const data = [
 
 
 
-const ListMenu = () => (
+const ListMenu = ({onClose}) => (
 	<>
 
 		<List
 			size="large"
 			dataSource={data}
-			renderItem={(item) => <List.Item><a href={item.link} className='text-black'>{item.title}</a></List.Item>}
+			renderItem={(item) => <List.Item>
+				<a href={item.link}
+					className='text-black'
+					onClick={onClose}
+				>
+					{item.title}
+				</a>
+			</List.Item>}
 		/>
 	</>
 );

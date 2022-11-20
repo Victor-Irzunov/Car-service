@@ -51,6 +51,11 @@ const data = [
 		text: 'Сообщите мастеру, что Вам необходим срочный ремонт и если будет возможность (клиент не приедет или долго ждать запчастей), то Вашу машину поставят на ремонт.',
 		id: 9,
 	},
+	{
+		title: 'Я очень довольна Вашими услугами, особенно мастером, где можно оставить отзыв?',
+		text: 'Отзыв Вы можете оставить...',
+		id: 10,
+	},
 ]
 
 
@@ -59,7 +64,7 @@ const data = [
 const CollapseComp = () => {
 	const screens = useScreens()
 	return (
-		<Collapse defaultActiveKey={['1']} ghost>
+		<Collapse ghost>
 			{data.map(el => {
 				return (
 					<Panel header={<span className='text-white'>{el.title}</span>} key={el.id} >

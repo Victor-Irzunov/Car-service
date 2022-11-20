@@ -25,20 +25,14 @@ const DrawerMenu = ({ open, setOpen }) => {
 
 	return (
 		<>
-
 			<Drawer
 				title="Меню" placement="right"
 				onClose={onClose} open={open}
 				className='relative'
 				drawerStyle={{ background: '#038fd4' }}
 			>
-				<ListMenu />
-
-
+				<ListMenu onClose={onClose} />
 				<Divider />
-
-
-
 				<div className='absolute bottom-3 left-0 w-full'>
 					<div className='flex justify-evenly'>
 						<Tooltip title="кофе & чай">
@@ -70,12 +64,9 @@ const DrawerMenu = ({ open, setOpen }) => {
 					</div>
 					<Divider />
 					<div className='pb-6 pl-8 pr-8 flex justify-around'>
-
-						{/* <img src={logoMini} className='w-[40%]' style={{}} /> */}
 						<InstagramOutlined style={{ fontSize: '2em' }} />
 						<WhatsAppOutlined style={{ fontSize: '2em' }} />
 						<YoutubeOutlined style={{ fontSize: '2em' }} />
-
 					</div>
 					<div className='flex justify-evenly' >
 						<span className=''>8 (029) 000-00-00</span>
