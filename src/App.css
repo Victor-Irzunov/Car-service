@@ -178,10 +178,10 @@ img{
 	background-blend-mode: multiply;
 }
 .fon4-mobile{
-	background: var(--col) url(./images/fon7.webp);
+	background: var(--col) url(./images/fon8.webp);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: right top;
 	width: 100%;
 	background-blend-mode: multiply;
 }
