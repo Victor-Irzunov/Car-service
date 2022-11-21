@@ -119,7 +119,7 @@ const data = [
 				image:imageGrm,
 			},
 			{
-				key: 2,
+				key: 3,
 				name: 'Замена глушителя',
 				time: 'от 1:00',
 				price: "от 25,00",
