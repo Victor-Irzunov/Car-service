@@ -8,6 +8,17 @@ import imageAmortizator from '../../images/foto-price/4.webp'
 import imageRichag from '../../images/foto-price/5.webp'
 import imageDiagnostik from '../../images/foto-price/6.webp'
 import imageLampa from '../../images/foto-price/7.webp'
+import imageSharov from '../../images/foto-price/8.webp'
+import imagepodshipnik from '../../images/foto-price/9.webp'
+import imageRulNakonech from '../../images/foto-price/10.webp'
+import imageShrus from '../../images/foto-price/11.webp'
+import imageKomputer from '../../images/foto-price/12.webp'
+import imageMaslo from '../../images/foto-price/13.webp'
+import imageGrm from '../../images/foto-price/14.webp'
+import imageGlush from '../../images/foto-price/15.webp'
+import imageSceple from '../../images/foto-price/16.webp'
+import imageTorSistema from '../../images/foto-price/17.webp'
+import imageKoleso from '../../images/foto-price/18.webp'
 
 const columns = [
 	{
@@ -16,17 +27,10 @@ const columns = [
 		key: 'name',
 	},
 	{
-		title: <span className='font-bold'>Время работы (час)</span>,
-		dataIndex: 'time',
-		key: 'time',
-		width: '35%',
-		align: 'center',
-	},
-	{
 		title: <span className='font-bold'>Стоимость (руб)</span>,
 		dataIndex: 'price',
 		key: 'price',
-		width: '15%',
+		// width: '40%',
 		align: 'center',
 	},
 	Table.EXPAND_COLUMN,
@@ -36,75 +40,51 @@ const data = [
 		'Ремонт подвески': [
 			{
 				key: 1,
-				name: 'Ремонт подвески',
+				name: 'Диагностика подвески',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'Время и цена зависит от состояния подвески, если давно подвеска не ремонтировалась и всё заржавело ....',
-				image: imageGajka,
+				price: "15,00",
+				description: 'Полная проверка задней и передней подвески.',
+				image:imageDiagnostik,
 			},
 			{
 				key: 2,
-				name: 'Замена колодок',
+				name: 'Замена шаровой опоры',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'Время и цена зависит от состояния суппортов и скоб',
-				image: imageSupport,
+				price: "от 30,00",
+				description: 'Цена зависит от время потраченного на снятие старой шаровой.',
+				image: imageSharov,
 			},
 			{
 				key: 3,
-				name: 'Замена тяги стабилизатора',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'Время и цена зависит от состояния',
-				image: imageGajka,
+				name: 'Замена ступичного подшипника',
+				time: 'от 50:00',
+				price: "от 50,00",
+				description: 'Время и цена зависит от время потраченного на снятие старого подшипника.',
+				image: imagepodshipnik,
 			},
 			{
 				key: 4,
-				name: 'Замена втулок стабилизатора',
+				name: 'Замена опорных подшипников',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'Время и цена зависит от состояния....',
-				image: imageVtulka,
+				price: "от 60,00",
+				description: 'Время и цена зависит от время потраченного на снятие амортизатора.',
+				image: imageAmortizator,
 			},
 			{
 				key: 5,
-				name: 'Замена амортизаторов',
+				name: 'Замена рулевых наконечников',
 				time: 'от 1:00',
 				price: "от 5,00",
-				description: 'Время и цена зависит от состояния....',
-				image: imageAmortizator,
+				description: 'Время и цена зависит от время потраченного на снятие старого наконечника.',
+				image: imageRulNakonech,
 			},
 			{
 				key: 6,
-				name: 'Замена пружин',
+				name: 'Замена шруса',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'Время и цена зависит от состояния...',
-				image: imageAmortizator,
-			},
-			{
-				key: 7,
-				name: 'Замена рычага передней подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'Время и цена зависит от состояния...',
-				image: imageRichag,
-			},
-			{
-				key: 8,
-				name: 'Замена рычага задней подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'Время и цена зависит от состояния....',
-				image: imageRichag,
-			},
-			{
-				key: 9,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'Время и цена зависит от состояния....',
-				image: imageDiagnostik,
+				price: "от 40,00",
+				description: 'Время и цена зависит от состояния старого шруса.',
+				image: imageShrus,
 			},
 		]
 	},
@@ -112,53 +92,11 @@ const data = [
 		'Ремонт электрооборудования': [
 			{
 				key: 1,
-				name: 'Замена ламп',
+				name: 'Компьютерная диагностика',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'Время и цена зависит от доступа к лампе. В некаторых машинах надо снимать бампер, что-бы поменять лампу....',
-				image: imageLampa,
-			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+				price: "от 20,00",
+				description: '',
+				image: imageKomputer,
 			},
 		]
 	},
@@ -166,52 +104,27 @@ const data = [
 		'Ремонт двигателя': [
 			{
 				key: 1,
-				name: 'Замена свечей накаливания',
+				name: 'Замена масла',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+				price: "от 25,00",
+				description: 'Замена масла в двигателе.',
+				image:imageMaslo,
 			},
 			{
 				key: 2,
-				name: 'Ремонт',
+				name: 'Замена ремня ГРМ',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+				price: "от 150,00",
+				description: 'Замена всех роликов и ремня.',
+				image:imageGrm,
 			},
 			{
-				key: 3,
-				name: 'Диагностика подвески',
+				key: 2,
+				name: 'Замена глушителя',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+				price: "от 25,00",
+				description: 'Цена зависит от кол-ва заменяемых банок и от время потраченного на снятие старого глушителя.',
+				image:imageGlush,
 			},
 		]
 	},
@@ -219,52 +132,12 @@ const data = [
 		'Ремонт коробки передач': [
 			{
 				key: 1,
-				name: 'Замена свечей накаливания',
+				name: 'Замена сцепления',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+				price: "от 250,00",
+				description: 'Цена зависит нужна ли замена корзины и выжимного подшипника.',
+				image:imageSceple,
+
 			},
 		]
 	},
@@ -272,477 +145,405 @@ const data = [
 		'Ремонт тормозной системы': [
 			{
 				key: 1,
-				name: 'Замена свечей накаливания',
+				name: 'Ремонт тормозной системы',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+				price: "от 60,00",
+				description: 'Цена зависит от заменяемых элементов.',
+				image:imageTorSistema,
 			},
 			{
 				key: 2,
-				name: 'Ремонт',
+				name: 'Замена тормозных колодок',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+				price: "от 25,00",
+				description: 'Цена зависит от состояния суппортов и скоб.',
+				image:imageSupport,
 			},
 		]
 	},
+	// {
+	// 	'Ремонт элементов кузова': [
+	// 		{
+	// 			key: 1,
+	// 			name: 'Замена свечей накаливания',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 2,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 3,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 4,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 5,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 6,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 7,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 	]
+	// },
+	// {
+	// 	'Мойка и хим. чистка авто': [
+	// 		{
+	// 			key: 1,
+	// 			name: 'Замена свечей накаливания',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 2,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 3,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 4,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 5,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 6,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 7,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 	]
+	// },
+	// {
+	// 	'Машину трясёт': [
+	// 		{
+	// 			key: 1,
+	// 			name: 'Замена свечей накаливания',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 2,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 3,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 4,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 5,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 6,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 7,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 	]
+	// },
+	// {
+	// 	'Машина дергается при движении': [
+	// 		{
+	// 			key: 1,
+	// 			name: 'Замена свечей накаливания',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 2,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 3,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 4,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 5,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 6,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 7,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 	]
+	// },
+	// {
+	// 	'Машина не заводится': [
+	// 		{
+	// 			key: 1,
+	// 			name: 'Замена свечей накаливания',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 2,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 3,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 4,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 5,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 6,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 7,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 	]
+	// },
+	// {
+	// 	'Что-то стучит': [
+	// 		{
+	// 			key: 1,
+	// 			name: 'Замена свечей накаливания',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 2,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 3,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 4,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 5,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 6,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 7,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 	]
+	// },
+	// {
+	// 	'Диагностика авто': [
+	// 		{
+	// 			key: 1,
+	// 			name: 'Замена свечей накаливания',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 2,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 3,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 4,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 5,
+	// 			name: 'Диагностика подвески',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 6,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 		{
+	// 			key: 7,
+	// 			name: 'Ремонт',
+	// 			time: 'от 1:00',
+	// 			price: "от 5,00",
+	// 			description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
+	// 		},
+	// 	]
+	// },
 	{
-		'Ремонт элементов кузова': [
+		'Шиномонтаж': [
 			{
 				key: 1,
-				name: 'Замена свечей накаливания',
+				name: '4 колеса',
 				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
+				price: "от 40,00",
+				description: 'Время и цена зависит от состояния болтов крепления колеса.',
+				image:imageKoleso,
 			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-		]
-	},
-	{
-		'Мойка и хим. чистка авто': [
-			{
-				key: 1,
-				name: 'Замена свечей накаливания',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-		]
-	},
-	{
-		'Машину трясёт': [
-			{
-				key: 1,
-				name: 'Замена свечей накаливания',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-		]
-	},
-	{
-		'Машина дергается при движении': [
-			{
-				key: 1,
-				name: 'Замена свечей накаливания',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-		]
-	},
-	{
-		'Машина не заводится': [
-			{
-				key: 1,
-				name: 'Замена свечей накаливания',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-		]
-	},
-	{
-		'Что-то стучит': [
-			{
-				key: 1,
-				name: 'Замена свечей накаливания',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-		]
-	},
-	{
-		'Диагностика авто': [
-			{
-				key: 1,
-				name: 'Замена свечей накаливания',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-		]
-	},
-	{
-		'Другое': [
-			{
-				key: 1,
-				name: 'Замена свечей накаливания',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Jim Green, I am 42 years old, living in London No. 1 Lake Park.',
-			},
-			{
-				key: 2,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 3,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 4,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 5,
-				name: 'Диагностика подвески',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 6,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
-			{
-				key: 7,
-				name: 'Ремонт',
-				time: 'от 1:00',
-				price: "от 5,00",
-				description: 'My name is Joe Black, I am 32 years old, living in Sidney No. 1 Lake Park.',
-			},
+			
+		
 		]
 	},
 ]
@@ -753,14 +554,7 @@ const TablePrice = () => {
 		'Ремонт двигателя': false,
 		'Ремонт коробки передач': false,
 		'Ремонт тормозной системы': false,
-		'Ремонт элементов кузова': false,
-		'Мойка и хим. чистка авто': false,
-		'Машину трясёт': false,
-		'Машина дергается при движении': false,
-		'Машина не заводится': false,
-		'Что-то стучит': false,
-		'Диагностика авто': false,
-		'Другое': false,
+		'Шиномонтаж': false,
 	})
 	const f1 = key => {
 		for (let el in active) {
@@ -777,7 +571,7 @@ const TablePrice = () => {
 					return (
 						<div key={idx}>
 							<div
-								className='flex justify-start mt-4 mb-4'
+								className='flex justify-start mt-4 mb-4 border-b border-[#9595956d] pb-3'
 								onClick={() => f1(Object.keys(el)[0])}
 								key={idx}
 							>

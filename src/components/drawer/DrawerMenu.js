@@ -1,5 +1,5 @@
 import React from 'react'
-import { Drawer, Divider, Tooltip, Button } from 'antd'
+import { Drawer, Divider, Tooltip, Button, Image } from 'antd'
 import { useScreens } from '../../Constants/constants'
 import ListMenu from '../listMenu/ListMenu'
 import {
@@ -10,6 +10,7 @@ import {
 	WifiOutlined,
 	CommentOutlined,
 } from '@ant-design/icons'
+import map from '../../images/map.webp'
 
 
 
@@ -28,29 +29,25 @@ const DrawerMenu = ({ open, setOpen }) => {
 			<Drawer
 				title="Меню" placement="right"
 				onClose={onClose} open={open}
-				className='relative'
 				drawerStyle={{ background: '#038fd4' }}
 			>
 				<ListMenu onClose={onClose} />
 				<Divider />
-				<div className='absolute bottom-3 left-0 w-full'>
+				<Image src={map} />
+				<div className='w-full mt-5'>
 					<div className='flex justify-evenly'>
 						<Tooltip title="кофе & чай">
 							<Button
 								shape="circle"
 								icon={<CoffeeOutlined />}
 								style={{ background: 'transparent', border: '1px solid #222' }}
-								size='large'
-
 							/>
-
 						</Tooltip>
 						<Tooltip title="бесплатный wifi">
 							<Button
 								shape="circle"
 								style={{ background: 'transparent', border: '1px solid #222' }}
 								icon={<WifiOutlined />}
-								size='large'
 							/>
 						</Tooltip>
 						<Tooltip title="общение с мастером">
@@ -58,19 +55,17 @@ const DrawerMenu = ({ open, setOpen }) => {
 								shape="circle"
 								icon={<CommentOutlined />}
 								style={{ background: 'transparent', border: '1px solid #222' }}
-								size='large'
 							/>
 						</Tooltip>
 					</div>
 					<Divider />
-					<div className='pb-6 pl-8 pr-8 flex justify-around'>
-						<InstagramOutlined style={{ fontSize: '2em' }} />
-						<WhatsAppOutlined style={{ fontSize: '2em' }} />
-						<YoutubeOutlined style={{ fontSize: '2em' }} />
-					</div>
+					{/* <div className='pb-6 pl-8 pr-8 flex justify-around'>
+						<InstagramOutlined style={{ fontSize: '1.7em' }} />
+						<WhatsAppOutlined style={{ fontSize: '1.7em' }} />
+						<YoutubeOutlined style={{ fontSize: '1.7em' }} />
+					</div> */}
 					<div className='flex justify-evenly' >
-						<span className=''>8 (029) 000-00-00</span>
-						<span className=''>8 (029) 000-00-00</span>
+						<span className=''>Телефон: +375 29 701-22-51</span>
 					</div>
 				</div>
 			</Drawer>

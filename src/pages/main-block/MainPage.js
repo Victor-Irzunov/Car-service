@@ -67,7 +67,7 @@ function MainPage() {
 					placement="leftBottom"
 					title='Остались вопросы? Позвоните нам и мы ответим.'
 					onConfirm={confirm}
-					okText={<a href='tel:80290000000'>Позвонить</a>}
+					okText={<a href='tel:80297012251'>Позвонить</a>}
 					cancelText="Закрыть"
 				>
 					<FloatButton icon={<QuestionCircleOutlined />} />
@@ -86,7 +86,7 @@ function MainPage() {
 							</h1>
 							<Space className='mb-9' size={[15]}>
 								<Button type="primary" size={screens.xs ? 'small' : 'large'} ghost={active === 1 ? false : true} onClick={() => toggleBtn(1)} shape="round">
-									Телефоны
+									Телефон
 								</Button>
 								<Button type="primary" size={screens.xs ? 'small' : 'large'} ghost={active === 2 ? false : true} onClick={() => toggleBtn(2)} shape="round">
 									Адрес
@@ -101,19 +101,13 @@ function MainPage() {
 										className='mb-6 text-white'
 									>
 										<Tooltip title="A1">
-											+375 29 000-00-00
+										+375 29 701-22-51
 										</Tooltip>
 										<Button type="primary" shape="circle" size='large' className='ml-5' icon={<PhoneOutlined />} />
 									</a>
-									<a href='tel:80290000000' className='mb-3 text-white'>
-										<Tooltip title="МТС">
-											+375 29 000-00-00
-										</Tooltip>
-										<Button type="primary" ghost shape="circle" size='large' className='ml-5' icon={<PhoneOutlined />} />
+									
 
-									</a>
-
-									<a href='tel:80290000000'
+									<a href='tel:80297012251'
 										className='mt-4 text-sm text-[#038fd4]'
 									>Позвонить администратору</a>
 								</div>
@@ -122,9 +116,9 @@ function MainPage() {
 								active === 2 &&
 								<div className='text-white text-lg  pl-5'>
 									<p>г. Минск</p>
-									<p>Первомайский район</p>
-									<p>ул. Минская 100 корп. 4</p>
-									<Button type='link' href='https://yandex.by/maps/157/minsk/house/Zk4YcAJhSkcGQFtpfXVyc3hnYw==/?indoorLevel=1&ll=27.651321%2C53.932448&z=16.81' style={{ paddingLeft: '0' }} target='_blank'>Посмотреть на карте</Button>
+									<p><span className='font-thin text-sm'>микрорайон</span> «Малиновка»</p>
+									<p>ул. Меньковский тракт 2а</p>
+									<Button type='link' href='https://yandex.by/maps/29630/minsk-district/house/Zk4YcgVmSkQGQFtpfXR0dH9lYw==/?ll=27.426311%2C53.855367&z=16.81' style={{ paddingLeft: '0' }} target='_blank'>Посмотреть на карте</Button>
 								</div>
 							}
 							{
