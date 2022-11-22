@@ -2,13 +2,12 @@ import React, { useState, useContext, useEffect } from 'react'
 import {
 	Row, Col, Button, Space, Badge, Tooltip,
 	notification,
-	Affix, Tag,
 	FloatButton,
 	message, Popconfirm,
 } from 'antd'
 import {
-	PhoneOutlined, FormOutlined, PieChartOutlined,
-	CarOutlined, ToolOutlined, SettingOutlined,
+	PhoneOutlined, FormOutlined,
+	UsergroupAddOutlined, SettingOutlined,
 	InfoCircleOutlined, QuestionCircleOutlined
 } from '@ant-design/icons'
 import { useScreens } from '../../Constants/constants'
@@ -101,11 +100,11 @@ function MainPage() {
 										className='mb-6 text-white'
 									>
 										<Tooltip title="A1">
-										+375 29 701-22-51
+											+375 29 701-22-51
 										</Tooltip>
 										<Button type="primary" shape="circle" size='large' className='ml-5' icon={<PhoneOutlined />} />
 									</a>
-									
+
 
 									<a href='tel:80297012251'
 										className='mt-4 text-sm text-[#038fd4]'
@@ -181,52 +180,33 @@ function MainPage() {
 							</Col>
 						}
 					</Row>
-					<div className={`${screens.xs ? 'mt-20':'mt-40'} flex justify-between ${screens.xs && 'pl-5'} ${screens.xs ? 'flex-col' : 'flex-wrap'}`}>
-						<div>
-							<Button
-								type="primary"
-								shape="round"
-								icon={<PieChartOutlined />}
-								size={screens.xs ? 'small' : ''}
-								onClick={() => openNotification('topLeft', 'Условия рассрочки', 'Рассрочку предоставляет банк-партнер. Вы можете оформить одну из карт Халва и получить выгодные условия.')}
-							/>
-							<p className='text-white mt-3'>
-								Ремонт в <span className='text-[#fff]'>рассрочку</span>
-							</p>
-						</div>
-						<div>
+					<div className={`${screens.xs ? 'mt-20' : 'mt-40'} flex justify-start ${screens.xs && 'pl-5'} ${screens.xs ? 'flex-col' : 'flex-wrap'}`}>
+
+						<div
+							onClick={() => openNotification('topRight', 'Приведи друга', 'Приводите к нам друзей и получайте скидку на ремонт вместе.')}
+							className='cursor-pointer mr-5'
+						>
 							<Button
 								type="primary" shape="round"
-								ghost
-								icon={<CarOutlined />}
+								icon={<UsergroupAddOutlined />}
 								size={screens.xs ? 'small' : ''}
-								onClick={() => openNotification('bottomLeft', 'Мойка автомобиля в Подарок при ремонте', 'Просторный комплекс включает в себя несколько боксов технического обслуживания, оборудованных подъемниками с профессиональным стендом развала-схождения в виде объемного изображения. На территории помещения расположено высокоточное оборудование, хозяйственные помещения и ')}
 							/>
 							<p className='text-white mt-3'>
-								Мойка авто в <span className='text-[#fff]'>подарок</span>
+								Приведи друга<span className='text-[#fff]'> и получи...</span>
 							</p>
 						</div>
-						<div>
-							<Button
-								type="primary" shape="round"
-								icon={<ToolOutlined />}
-								size={screens.xs ? 'small' : ''}
-								onClick={() => openNotification('topRight', 'Проточка дисков', 'Наш специализированный автосервис оказывает в Минске квалифицированные услуги по проточке тормозных дисков без снятия и со снятием. В процессе проведения работ мы используем профессиональное импортное оборудование, что позволяет гарантировать высокое качество и оперативные сроки.')}
-							/>
-							<p className='text-white mt-3'>
-								Проточка дисков со <span className='text-[#fff]'>скидкой 10%</span>
-							</p>
-						</div>
-						<div>
+						<div
+							onClick={() => openNotification('bottomRight', 'Диагностика авто будет бесплатная', 'Если  будут выполняться ремонтные работы по устранению неисправностей обнаруженных в ходе диагностики.')}
+							className='cursor-pointer'
+						>
 							<Button
 								type="primary" shape="round"
 								ghost
 								icon={<SettingOutlined />}
 								size={screens.xs ? 'small' : ''}
-								onClick={() => openNotification('bottomRight', 'Диагностика авто будет бесплатная', 'Если  будут выполняться ремонтные работы по устранению неисправностей обнаруженных в ходе диагностики.')}
 							/>
 							<p className='text-white mt-3'>
-								Диагностика <span className='text-[#fff]'>бесплатно</span>
+								Диагностика <span className='text-[#fff]'>бесплатно...</span>
 							</p>
 						</div>
 					</div>
